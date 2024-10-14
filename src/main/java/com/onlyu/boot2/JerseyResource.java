@@ -8,7 +8,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.HashMap;
 import java.util.Map;
 
 @Component
@@ -24,8 +23,6 @@ public class JerseyResource
     @Path("/exception")
     @Produces(MediaType.APPLICATION_JSON)
     public String exception() {
-        Map<String, String> m = new HashMap<>();
-        m.put("message", "hello");
-        throw new WebApplicationException("Test exception", Response.status(Response.Status.BAD_REQUEST.getStatusCode()).entity(m).build());
+        throw new WebApplicationException("Test exception", Response.status(Response.Status.BAD_REQUEST.getStatusCode()).entity(Map.of("errorMessage", "This is a test exception!")).build());
     }
 }
