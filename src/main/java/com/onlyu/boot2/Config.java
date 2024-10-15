@@ -7,7 +7,8 @@ public class Config extends ResourceConfig
     public Config()
     {
         register(JerseyResource.class);
-        register(CustomJerseyFilter.class);
+        //register(CustomJerseyFilter.class);
+        register(CustomJerseyFilter2.class);
         //register(ExMapper.class);
     }
 }

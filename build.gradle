@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.18'
+    id 'org.springframework.boot' version '2.4.13'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -19,7 +19,6 @@ springBoot {
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation('org.springframework.boot:spring-boot-starter-jersey')
-    //implementation('org.springframework.boot:spring-boot-starter-undertow')
 
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'

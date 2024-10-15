@@ -9,16 +9,16 @@ import org.springframework.context.annotation.Configuration;
 public class ServletRegistrationConfig
 {
     @Bean
-    public ServletRegistrationBean publicJersey() {
+    public ServletRegistrationBean j1() {
         ServletRegistrationBean j1 = new ServletRegistrationBean(new ServletContainer(new Config()));
-        j1.addUrlMappings("/jersey/*");
+        j1.addUrlMappings("/*");
         j1.setName("v1");
         j1.setLoadOnStartup(0);
         return j1;
     }
 
     @Bean
-    public ServletRegistrationBean privateJersey() {
+    public ServletRegistrationBean j2() {
         ServletRegistrationBean j2 = new ServletRegistrationBean(new ServletContainer(new Config2()));
         j2.addUrlMappings("/jersey2/*");
         j2.setName("v2");
